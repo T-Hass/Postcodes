@@ -17,6 +17,5 @@ public class CodeDetails {
 	private String ccg;
 	@SerializedName("nuts")
 	private String nuts;
-	
-}
 
+}

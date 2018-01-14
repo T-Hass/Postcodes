@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 import com.google.gson.annotations.SerializedName;
 
-public class PostcodeAutocompleteResult {
+public class PostcodeAutocompleteResponse {
 	@SerializedName("status")
 	private Integer status;
 	@SerializedName("result")

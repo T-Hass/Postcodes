@@ -7,7 +7,7 @@ import io.postcodes.PostcodesTests.ApiTools;
 
 public class ApiCallAutocomplete {
 
-	public static PostcodeAutocompleteResult getAutocompletePostcodeSuggestions(String siteUrl, String postcode)
+	public static PostcodeAutocompleteResponse getAutocompletePostcodeSuggestions(String siteUrl, String postcode)
 			throws MalformedURLException, IOException {
 
 		String url = siteUrl + "/postcodes/" + postcode + "/autocomplete";
@@ -16,9 +16,9 @@ public class ApiCallAutocomplete {
 		String jsonResponse = ApiTools.startConnectionGetResponse(url, "");
 
 		// Parse JSON in jsonResponse into class postcodeAutocompleteResult
-		PostcodeAutocompleteResult postcodeSuggestions = ApiTools.parsePostcodeAutoCompleteJsonString(jsonResponse);
+		PostcodeAutocompleteResponse postcodeResponse = ApiTools.parsePostcodeAutoCompleteJsonString(jsonResponse);
 
-		return postcodeSuggestions;
+		return postcodeResponse;
 
 	}
 

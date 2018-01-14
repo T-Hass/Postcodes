@@ -19,3 +19,8 @@ Feature: Postcodes.io API
       | 51.469761 | -0.140898 | SW8     | SW8 3LH  | 25.68607488 |
       | 53.371137 | -1.485651 | S11     | S11 8JJ  |  1.75609711 |
       | 53.343246 | -1.775370 | S33     | S33 8WF  | 23.23899339 |
+
+  Scenario: 
+    Given I am using http://api.postcodes.io
+    When 11S outcode is used for outward code lookup
+    #Then there should be no result returned

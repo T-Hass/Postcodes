@@ -38,14 +38,22 @@ public class ApiTools {
 		return postcodeResults;
 	}
 
-	public static PostcodeAutocompleteResult parsePostcodeAutoCompleteJsonString(String jsonString) {
+	public static PostcodeAutocompleteResponse parsePostcodeAutoCompleteJsonString(String jsonString) {
 		// Parse JSON in String into class PostcodeAutocompleteResult
 		Gson requestGson = new Gson();
-		PostcodeAutocompleteResult postcodeACResults = requestGson.fromJson(jsonString,
-				PostcodeAutocompleteResult.class);
+		PostcodeAutocompleteResponse postcodeACResults = requestGson.fromJson(jsonString,
+				PostcodeAutocompleteResponse.class);
 
 		return postcodeACResults;
 
+	}
+
+	public static OutcodeResponse parseOutcodeLookupJsonString(String jsonString) {
+		// Parse JSON in String into class OutcodeResponse
+		Gson requestGson = new Gson();
+		OutcodeResponse outcodeResponse = requestGson.fromJson(jsonString, OutcodeResponse.class);
+
+		return outcodeResponse;
 	}
 
 	public static String parseResponseToString(InputStream response) {

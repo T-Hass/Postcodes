@@ -17,9 +17,9 @@ public class ApiCallLatLongLookup {
 		String jsonResponse = ApiTools.startConnectionGetResponse(url, "");
 
 		// Parse JSON in jsonResponse into class postcodeResult
-		PostcodeResponse postcodeResult = ApiTools.parsePostcodeJsonString(jsonResponse);
+		PostcodeResponse postcodeResponse = ApiTools.parsePostcodeJsonString(jsonResponse);
 
-		return postcodeResult;
+		return postcodeResponse;
 	}
 
 }

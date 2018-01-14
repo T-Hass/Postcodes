@@ -13,7 +13,7 @@ public class StepDefs implements cucumber.api.java8.En {
 
 	String apiBaseUrl;
 	String expectedResult;
-	PostcodeAutocompleteResult postcodeACResponse;
+	PostcodeAutocompleteResponse postcodeACResponse;
 	PostcodeResponse postcodeResult;
 
 	public StepDefs() {
@@ -61,5 +61,9 @@ public class StepDefs implements cucumber.api.java8.En {
 			Assert.assertTrue(foundPostcode);
 		});
 
+		// Steps for Scenario 3
+		When("^(.+) outcode is used for outward code lookup$", (String outcode) -> {
+			OutcodeResponse outcodeResponse = ApiCallOutcodeLookup.outcodeLookup(apiBaseUrl, outcode);
+		});
 	}
 }
