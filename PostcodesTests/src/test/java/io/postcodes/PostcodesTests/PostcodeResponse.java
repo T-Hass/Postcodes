@@ -4,13 +4,14 @@ import java.util.LinkedList;
 
 import com.google.gson.annotations.SerializedName;
 
-public class PostcodeAutocompleteResult {
+public class PostcodeResponse {
+
 	@SerializedName("status")
 	private Integer status;
 	@SerializedName("result")
-	private LinkedList<String> postcodeSuggestions;
+	private LinkedList<PostcodeResults> postcodes;
 
-	public LinkedList<String> getPostCodeSuggestions() {
-		return postcodeSuggestions;
+	public LinkedList<PostcodeResults> getPostcodeResults() {
+		return postcodes;
 	}
 }
